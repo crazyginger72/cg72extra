@@ -31,8 +31,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'cg72extra:window_closed 2';
 	type = "shapeless",
-	recipe = {
-		{ "cg72extra:window_plain", "cg72extra:window_plain"}
+	recipe = { "cg72extra:window_plain", "cg72extra:window_plain"}
 })
 
 minetest.register_craft({
