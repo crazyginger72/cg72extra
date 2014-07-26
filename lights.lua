@@ -55,8 +55,7 @@ drawtype = "nodebox",
 		end
 
 		return minetest.item_place(itemstack, placer, pointed_thing)
-
-        end,
+	end,
 
 	 after_dig_node = function(pos, oldnode, oldmetadata, digger)
 
