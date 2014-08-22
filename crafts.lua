@@ -85,15 +85,6 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "cg72extra:light";
 	recipe = {
-		{ "moreblocks:super_glo_glass", "", "", },
-		{ "moreblocks:super_glo_glass", "", "", },
-		{ "moreblocks:super_glo_glass", "", "", },
-		}
-})
-
-minetest.register_craft({
-	output = "cg72extra:light";
-	recipe = {
 		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot", },
 		{ "group:glass",         "default:torch",       "group:glass", },
 		{ "group:glass",         "default:torch",       "group:glass", },
@@ -109,15 +100,27 @@ minetest.register_craft({
 		}
 })
 
-minetest.register_craft({
-	output = "cg72extra:light";
-	recipe = {
-		{ "homedecor:glowlight_quarter_white", "", "", },
-		{ "homedecor:glowlight_quarter_white", "", "", },
-		{ "homedecor:glowlight_quarter_white", "", "", },
-		}
-})
+if (minetest.get_modpath("moreblocks")) then
+	minetest.register_craft({
+		output = "cg72extra:light";
+		recipe = {
+			{ "moreblocks:super_glo_glass", "", "", },
+			{ "moreblocks:super_glo_glass", "", "", },
+			{ "moreblocks:super_glo_glass", "", "", },
+			}
+	})
+end
 
+if (minetest.get_modpath("homedecor")) then
+	minetest.register_craft({
+		output = "cg72extra:light";
+		recipe = {
+			{ "homedecor:glowlight_quarter_white", "", "", },
+			{ "homedecor:glowlight_quarter_white", "", "", },
+			{ "homedecor:glowlight_quarter_white", "", "", },
+			}
+	})
+end
 
 
 
