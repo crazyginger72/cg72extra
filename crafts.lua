@@ -1,7 +1,7 @@
 minetest.register_craft({
-	output = "cg72extra:blinds";
-	recipe = {
-		{ "group:stick", "group:stick", "group:stick", },
+	output = "cg72extra:blinds 2";
+	recipe = { 
+		{ "group:wood",  "group:wood",  "group:wood", },
 		{ "group:stick", "group:stick", "group:stick", },
 		{ "group:stick", "group:stick", "group:stick", },
 		}
@@ -29,6 +29,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "cg72extra:window_plain";
+	recipe = {
+		{ "group:stick",   "group:stick",   "group:stick", },
+		{ "default:glass", "default:glass", "default:glass", },
+		{ "group:stick",   "group:stick",   "group:stick", },
+		}
+})
+
+minetest.register_craft({
 	output = 'cg72extra:window_closed 2';
 	type = "shapeless",
 	recipe = { "cg72extra:window_plain", "cg72extra:window_plain"}
@@ -44,10 +53,19 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "cg72extra:window";
+	recipe = {
+		{ "group:stick",   "group:stick", "group:stick", },
+		{ "default:glass", "group:stick", "default:glass", },
+		{ "group:stick",   "group:stick", "group:stick", },
+		}
+})
+
+minetest.register_craft({
 	output = 'cg72extra:window_sill 12';
 	recipe = {
 		{ "", "", "", },
-		{ "group:wood", "group:wood", "group:wood", },
+		{ "group:wood",  "group:wood",  "group:wood", },
 		{ "group:stick", "group:stick", "group:stick", },
 		}
 })
@@ -77,8 +95,17 @@ minetest.register_craft({
 	output = "cg72extra:light";
 	recipe = {
 		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot", },
-		{ "group:glass", "default:torch", "group:glass", },
-		{ "group:glass", "default:torch", "group:glass", },
+		{ "group:glass",         "default:torch",       "group:glass", },
+		{ "group:glass",         "default:torch",       "group:glass", },
+		}
+})
+
+minetest.register_craft({
+	output = "cg72extra:light";
+	recipe = {
+		{ "default:steel_ingot", "default:steel_ingot", "default:steel_ingot", },
+		{ "default:glass",       "default:torch",       "default:glass", },
+		{ "default:glass",       "default:torch",       "default:glass", },
 		}
 })
 
